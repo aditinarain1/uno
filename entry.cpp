@@ -1,12 +1,13 @@
 #include <Servo.h>
-#define IR_exit 13
-int Switch =6;
-int led=5;
+int IR_entry =12;
 Servo servo_exit;
-int c=0;
+int led=7;
 void setup() {
-  pinMode(Switch,INPUT);
-  pinMode(led,OUTPUT);
+  // put your setup code here, to run once:
+  servo_exit.attach(9);
+ servo_exit.write(0);
+pinMode(IR_entry,INPUT);
+pinMode(led,INPUT);
 }
 
 void loop() {
@@ -14,5 +15,5 @@ void loop() {
 if((digitalRead(IR_exit))==HIGH) 
 {
   
-println("hello:");
+println("Thankyou");
 }
